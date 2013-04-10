@@ -1,0 +1,59 @@
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Kigo Photo Creator</h1>
+  </div>
+</header>
+<% unless (@first_name && @last_name && @email) : %>
+<div class="container">
+	<form id="search_advertiser" class="offset2 form-horizontal">
+	  <div class="control-group">
+	    <label class="control-label">Advertiser Number</label>
+	    <div class="controls">
+	      <input type="text" id="advertiser" placeholder="advertiser">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="inputPassword">Brand</label>
+	    <div class="controls">
+	      <select id="brand">
+				  <option value="ha">trips-ha</option>
+				  <option value="hr">trips-hr</option>
+				  <option value="vv">trips-vv (fewo)</option>
+				  <option value="ab">trips-ab (abritel)</option>
+				</select>
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <div class="controls">
+	      <button id="adv" type="" class=" btn btn-success">Search</button>
+	    </div>
+	  </div>
+	</form>
+</div>
+<% end %>
+<% if (@first_name && @last_name && @email) : %>
+<div id="found_advertiser" class="container">
+<div class="offset2 span7">
+	<table class="table ">
+	  <thead>
+	    <tr>
+	      <th>First Name</th>
+	      <th>Last Name</th>
+	      <th>Email</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td><%= @first_name %></td>
+	      <td><%= @last_name %></td>
+	      <td><%= @email %></td>
+	    </tr>
+	  </tbody>
+	</table>
+	<div class="offset2">
+	  <button id="back" type="submit" class="btn btn-primary">Back</button>
+	  <button id="download" type="button" class="btn btn-primary">Download Photos</button>
+	</div>
+</div>
+</div>
+<% end %>

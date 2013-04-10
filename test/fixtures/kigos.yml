@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uuid: MyString
+  kigo_id: MyString
+  ha_id: 
+
+two:
+  uuid: MyString
+  kigo_id: MyString
+  ha_id: 
